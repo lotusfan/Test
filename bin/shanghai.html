@@ -1,0 +1,319 @@
+
+x
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<link rel="stylesheet" href="/public/scripts/themes/default.css" type="text/css"></link>
+<link href="/public/scripts/themes/default/easyui.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/public/scripts/themes/default/tabs.css" type="text/css"></link>
+<link href="/public/scripts/themes/icon.css" rel="stylesheet" type="text/css" />
+<link href="../../css/mu.css" rel="stylesheet" type="text/css" />
+<link href="../../css/tab.css" rel="stylesheet" type="text/css" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" />
+<link href="../../css/table.css" rel="stylesheet" type="text/css" />
+<script src="/public/scripts/jquery-1.4.2.min.js"></script>
+<script src="/public/scripts/jquery.easyui.min.js"></script>
+<script src="/public/scripts/locale/easyui-lang-zh_CN.js"></script>
+<script src="/public/scripts/ctais/objectInterface.js"></script>
+<script src="/public/scripts/ctais/FormCtrl.js"></script>
+<script src="/public/scripts/table.js"></script>
+<script src="/public/scripts/common.js"></script>
+<link href="/css/cssWtForm.css" rel="stylesheet" type="text/css" />
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;" />
+<title>普通发票查询</title>
+<link href="../images/2006/main.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+body {
+background-color: #f1f2f4;
+}
+.form-anniu-1 {
+border: 1px #666666 solid;
+font-family: "宋体";
+font-size: 9pt;
+color: #000000;
+background-color: #BED0EF;
+line-height: normal;
+font-weight: normal;
+clip: rect( );
+font-style: normal
+}
+-->
+</style>
+</head>
+<body class="gybody" onload="biaoti('发票信息查询');">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="/pub/images/head_wza.css"></link>
+<script src="/pub/images/head_wza.js" type="text/javascript"></script>
+<script src="/pub/images/selectCss.js" type="text/javascript"></script>
+<style type="text/css">
+.caidan {
+TEXT-ALIGN: center; FONT-FAMILY: "宋体"; COLOR: #1a56a8; FONT-SIZE: 16px; FONT-WEIGHT: bold
+}
+a:link{ color:#1a56a8;text-decoration:none;}
+a:visited {color:#1a56a8;text-decoration:none;}
+a:hover{text-decoration:none;color:#ff6000;}
+</style>
+<title>上海市国家税务局 上海市地方税务局 欢迎您</title>
+<script type="text/javascript" src="/public/scripts/topmenu.js"></script></head>
+<body class="gybody">
+<div class="top" style="display:none;">
+<div class="top-nr" id="loginBefore">
+<!--
+<a id="bangzhu" href="#">网站使用帮助</a>
+<a id="bangzhu" href="xxx.doc">用户操作手册</a>
+-->
+<!-- a id="shoucang" href="#" onclick="AddFavorite(window.location,document.title);">加为收藏</a-->
+<!--
+<a id="shouye" href="#" onclick="SetHome(this,window.location);">设为首页</a>
+-->
+</div>
+</div>
+<div class="gydiv1" align="center" style="z-index:9;">
+<table class="gytable1" cellspacing="0" cellpadding="0">
+<TR>
+<TD background="/pub/images/gj_r1_c2_r7_c2.jpg">
+<!-- ------------------------------------------ -->
+<div class="container">
+<div class="head" style="margin-left: 9px">
+<form action="/wasdemo/search" method="post" id="jiansuo" name="jiansuo" target="_blank">
+<input type="hidden" name="channelid" id="channelid" value="198173" />
+<input type="hidden" name="searchword" id="searchword" />
+</form>
+<div class="head_main"><span>www.tax.sh.gov.cn</span>
+<ul>
+<li><script>writeDateInfo();</script></li>
+</ul>
+</div>
+<div class="banner"></div>
+<div class="headbar" style="height:71px;padding-bottom: 10px">
+<div class="notice pad_l5"><img src="/pub/images/qz1_wza.gif" OLDSRC="/pub/images/qz1_wza.gif" OLDID="4803" RELATED="1" /><span style="cursor: pointer;" onclick="window.location.href='/pub/'">首页</span></div>
+<div class="search clearfix" style="height:71px;padding-bottom: 10px;">
+<div class="zoom"></div>
+<INPUT style="margin:0; padding:0; font-weight:normal; font-style:normal; font-family:宋体; list-style-type:none; border:none;" name="s" id="s" type="text" value="请输入关键字" onFocus="if(value==defaultValue){value='';this.style.color='#000'}" />
+<DIV class="selected" >
+<SELECT name="sType" id="select1">
+<option selected="selected">全部</option>
+<option value="xxgk" >信息公开</option>
+<option value="bsfw" >纳税服务</option>
+<option value="ssxc" >税收宣传</option>
+<option value="hdcy" >公众参与</option>
+</SELECT>
+</DIV>
+<a href="#"><img src="/pub/images/shcs_wza11.gif" border="0" class="btn_search" onclick="yanzheng()" OLDSRC="/pub/images/shcs_wza11.gif" OLDID="4804" RELATED="1" /></a><a href="/pub/gjjs.html">高级检索</a>
+</DIV>
+</div>
+</div>
+</div>
+<!-- ------------------------------------------ -->
+</TD>
+</TR>
+<tr>
+<td class="gytd1" align="middle">
+<table class="gytable2" cellspacing="0" cellpadding="0" align="center">
+<tr>
+<td colspan="6" valign="top">
+<table class="gytable3" cellspacing="0" cellpadding="0" align="center">
+<tr>
+<td style="padding-top: 25px"><img src="/images/nr6_c3.jpg" width="790px;" height="4" /></td>
+</tr>
+<tr>
+<td class="gytd2" id="documentxx" >
+<table class="gytable4" cellpadding="0" cellspacing="0" >
+<tr>
+<td colspan="4" align="center" class="biaoti">
+<span id="biaoti" class="biaoti"></span>
+</td>
+</tr>
+<tr>
+<td colspan="4" align="center">
+<img src="/images/line.jpg" width="600px;" height="2" />
+</td>
+</tr>
+<tr>
+<td colspan="4" align="center">
+<br/>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>
+<div id="gycenter">
+<form name="form1" method="post" action="WSBSptFpCx_login.jsp"style="margin:0px">
+<table width="90%" border="0" align="center" cellpadding="0"
+cellspacing="0">
+<tr>
+<td >
+<br />
+<br />
+<table width="420" border="0" align="center"
+cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<img src="images/fp_r1_c1.jpg" width="420" height="58" /></td>
+</tr>
+<tr>
+<td>
+<table width="100%" border="0" cellspacing="0"
+cellpadding="0" style="">
+<tr>
+<td background="images/fp_r2_c1.jpg"><img src="images/fp_r2_c1.jpg" width="16" height="225" /></td>
+<td width="387" align="center"
+background="images/fp_r2_c2.jpg">
+<table width="100%" border="0" cellspacing="0"
+cellpadding="0">
+<tr>
+<td height="40" align="center"><img src="images/suc.gif" width="143"
+height="59" /></td>
+</tr>
+<tr>
+<td width="42%" height="40" align="center">
+<span style="line-height:20px;">
+<strong>发票23100137025240011998<br>于2013年12月26日由<br>上海市闸北区税务局出售，<br>购票方为上海阳明餐饮有限公司。</strong>
+</span>
+</td>
+</tr>
+<tr align="center" valign="bottom">
+<td height="40" >
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="">
+<tr>
+<td colspan="4">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="4">&nbsp;</td>
+</tr>
+<tr>
+<td width="12%">&nbsp;</td>
+<td width="16%">友情提示：</td>
+<td width="62%" align="left">
+&nbsp;
+</td>
+<td width="10%">&nbsp;</td>
+</tr>
+<tr>
+<td >&nbsp;</td>
+<td >&nbsp;</td>
+<td align="left">
+查询结果只表明发票在税务征管系统中的记录状态，不作为鉴别假票、虚开、非法开具发票的法律依据。
+</td>
+<td >&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr align="right" valign="bottom">
+<td height="40"><input type="submit" name="Submit" value="返回"class=form-anniu-1 />
+&nbsp;&nbsp;&nbsp;&nbsp; </td>
+</tr>
+</table> </td>
+<td background="images/fp_r2_c3.jpg"><img src="images/fp_r2_c3.jpg" width="16" height="240" /></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<img src="images/fp_r3_c1.jpg" width="420" height="19" /></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<br></td>
+</tr>
+</table>
+</form>
+</div>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>上海市财政局 上海市国家税务局 上海市地方税务局 欢迎您</title>
+<script type="text/javascript">
+function zjPrint(Id){
+var mStr;
+mStr = window.document.body.innerHTML ;
+var mWindow = window;
+window.document.body.innerHTML =window.document.all(Id).innerHTML;
+$("input[type='button']").each(function(i){
+$(this).css("display","none");
+});
+window.print();
+window.document.body.innerHTML = mStr;
+}
+</script>
+</head>
+<body class="gybody" onload="">
+<div class="gydiv1" align="center">
+<table class="gytable1" cellspacing="0" cellpadding="0">
+<tr>
+<td class="gytd1" align="center">
+<table class="gytable2" cellspacing="0" cellpadding="0">
+<tr>
+<td colspan="6" valign="top" style="padding-bottom: 30px" align="center">
+<table class="gytable3" cellspacing="0" cellpadding="0" align="center">
+<tr >
+<td background="/images/nr8_c3.gif" align="center" id="documentxx" >
+<table class="gytable4" cellpadding="0" cellspacing="0" >
+<!-- 与上面的网页数据样式这个地方开始一样 -->
+<TR>
+<TD colSpan=4 align="center"><br/>
+<IMG src="/images/gj_r1_c2_r9_c5.jpg" width="600" height="2" >
+</TD>
+</TR>
+<TR>
+<TD style="PADDING-RIGHT: 3px; COLOR: #11167e; FONT-SIZE: 12px" height=55 colSpan=2 align=right>将此页面发送到E-mail： <INPUT type=text name=mail></TD>
+<TD colSpan=2><IMG src="/images/send.jpg" width=64 height=20></TD></TR>
+<TR>
+<TD height=35 align=right><IMG src="/images/print_2.jpg" width=79 height=20 onclick="zjPrint('gycenter');" style="cursor: pointer;"></TD>
+<TD align=middle>&nbsp;&nbsp;</TD>
+<TD colSpan=2 align=left><IMG src="/images/jiucuo.jpg" width=79 height=20 id="jiucuotp" style="cursor: pointer;"></TD></TR>
+<TR>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD style="PADDING-RIGHT: 25px" height=55 vAlign=center colSpan=2 align=right><IMG onclick="window.close();" src="/images/close.gif" width=49 height=49 style="cursor: pointer;"></TD></TR>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="/images/nr9_c3.jpg" width="790" height="8" /></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" align="center">
+<TBODY>
+<TR>
+<TD class="wei" height=100 background=/images/gj_r1_c2_r15_c2.jpg align=middle>
+<!-- -------------------------------------------------- -->
+<div class="bottom" style="margin-left: 9px;width: 100%;">
+<div class="bz">
+<p style="width: 450px;line-height:12px;">上海市国家税务局 上海市地方税务局 ©版权所有</p>
+<p style="width: 450px;line-height:12px;">维护单位：市局办公室　技术支持：市局信息中心 电话：54679568</p>
+<p style="width: 450px;line-height:12px;">地址：上海市肇嘉浜路800号　邮政编码：200030　邮箱：tax@shanghai.gov.cn</p>
+<p style="width: 450px;line-height:12px;">建议使用：1024*768分辨率 16Bit颜色 IE6.0以上版本浏览器和中文大字符集</p></div>
+<div class="map">&nbsp;&nbsp;&nbsp;<a href="/pub/SY/wzdt/201012/t20101230_305339.html" target="_blank">网站地图</a> | <a href="/pub/SY/wzsm/200607/t20060728_301808.html" target="_blank">声明</a> <br />&nbsp;&nbsp;&nbsp;<a href="/pub/SY/wzsysm/201012/t20101222_305297.html" target="_blank">网站说明</a> | <a onclick="jiucuo()" target="_blank" onmousemove="this.style.cursor='pointer';" >纠错</a></div>
+</div>
+<!-- -------------------------------------------------- -->
+</TD>
+</TR>
+<TR>

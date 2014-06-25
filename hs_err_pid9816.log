@@ -1,0 +1,175 @@
+#
+# An unexpected error has been detected by Java Runtime Environment:
+#
+#  Internal Error (os_windows_x86.cpp:117), pid=9816, tid=18916
+#  Error: guarantee(result == -1,"Unexpected result from topLevelExceptionFilter")
+#
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (11.3-b02 mixed mode windows-amd64)
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000038c800):  JavaThread "main" [_thread_in_native, id=18916, stack(0x0000000001e40000,0x0000000001f40000)]
+
+Stack: [0x0000000001e40000,0x0000000001f40000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+
+[error occurred during error reporting (printing native stack), id 0xc0000005]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  sun.font.Type1Font.createScaler(I)J+0
+j  sun.font.Type1Font.getScaler()J+15
+j  sun.font.Type1GlyphMapper.initMapper()V+16
+j  sun.font.Type1GlyphMapper.<init>(Lsun/font/Type1Font;)V+10
+j  sun.font.Type1Font.getMapper()Lsun/font/CharToGlyphMapper;+13
+j  sun.font.StandardGlyphVector.init(Ljava/awt/Font;[CIILjava/awt/font/FontRenderContext;I)V+107
+j  sun.font.StandardGlyphVector.<init>(Ljava/awt/Font;Ljava/lang/String;Ljava/awt/font/FontRenderContext;)V+17
+j  java.awt.Font.createGlyphVector(Ljava/awt/font/FontRenderContext;Ljava/lang/String;)Ljava/awt/font/GlyphVector;+7
+j  org.apache.pdfbox.pdmodel.font.PDSimpleFont.drawString(Ljava/lang/String;[ILjava/awt/Graphics;FLjava/awt/geom/AffineTransform;FF)V+220
+j  org.apache.pdfbox.pdfviewer.PageDrawer.processTextPosition(Lorg/apache/pdfbox/util/TextPosition;)V+436
+j  org.apache.pdfbox.util.PDFStreamEngine.processEncodedText([B)V+715
+j  org.apache.pdfbox.util.operator.ShowTextGlyph.process(Lorg/apache/pdfbox/util/PDFOperator;Ljava/util/List;)V+162
+j  org.apache.pdfbox.util.PDFStreamEngine.processOperator(Lorg/apache/pdfbox/util/PDFOperator;Ljava/util/List;)V+35
+j  org.apache.pdfbox.util.PDFStreamEngine.processSubStream(Lorg/apache/pdfbox/cos/COSStream;)V+126
+j  org.apache.pdfbox.util.PDFStreamEngine.processSubStream(Lorg/apache/pdfbox/pdmodel/PDPage;Lorg/apache/pdfbox/pdmodel/PDResources;Lorg/apache/pdfbox/cos/COSStream;)V+20
+j  org.apache.pdfbox.util.PDFStreamEngine.processStream(Lorg/apache/pdfbox/pdmodel/PDPage;Lorg/apache/pdfbox/pdmodel/PDResources;Lorg/apache/pdfbox/cos/COSStream;)V+43
+j  org.apache.pdfbox.pdfviewer.PageDrawer.drawPage(Ljava/awt/Graphics;Lorg/apache/pdfbox/pdmodel/PDPage;Ljava/awt/Dimension;)V+97
+j  org.apache.pdfbox.pdmodel.PDPage.convertToImage(II)Ljava/awt/image/BufferedImage;+306
+j  org.apache.pdfbox.pdmodel.PDPage.convertToImage()Ljava/awt/image/BufferedImage;+5
+j  test.Test_PDF_to_JPG.main([Ljava/lang/String;)V+53
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000000004abb9c00 JavaThread "AWT-Windows" daemon [_thread_in_native, id=5248, stack(0x000000004ba40000,0x000000004bb40000)]
+  0x000000004aa57400 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=22284, stack(0x000000004b840000,0x000000004b940000)]
+  0x0000000049f9fc00 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=21280, stack(0x000000004a7e0000,0x000000004a8e0000)]
+  0x0000000049f99400 JavaThread "CompilerThread1" daemon [_thread_blocked, id=15932, stack(0x000000004a6e0000,0x000000004a7e0000)]
+  0x0000000049f94c00 JavaThread "CompilerThread0" daemon [_thread_blocked, id=20320, stack(0x000000004a5e0000,0x000000004a6e0000)]
+  0x0000000049f94400 JavaThread "Attach Listener" daemon [_thread_blocked, id=8160, stack(0x000000004a4e0000,0x000000004a5e0000)]
+  0x0000000049f93800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=9536, stack(0x000000004a3e0000,0x000000004a4e0000)]
+  0x000000000205e800 JavaThread "Finalizer" daemon [_thread_blocked, id=18388, stack(0x000000004a2e0000,0x000000004a3e0000)]
+  0x000000000205dc00 JavaThread "Reference Handler" daemon [_thread_blocked, id=9988, stack(0x000000004a1e0000,0x000000004a2e0000)]
+=>0x000000000038c800 JavaThread "main" [_thread_in_native, id=18916, stack(0x0000000001e40000,0x0000000001f40000)]
+
+Other Threads:
+  0x0000000049f43400 VMThread [stack: 0x000000004a0e0000,0x000000004a1e0000] [id=20568]
+  0x0000000049fa0000 WatcherThread [stack: 0x000000004a8e0000,0x000000004a9e0000] [id=18000]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 34944K, used 17536K [0x0000000034680000, 0x0000000036b40000, 0x0000000049720000)
+  eden space 32256K, 46% used [0x0000000034680000,0x00000000355015d0,0x0000000036600000)
+  from space 2688K, 99% used [0x00000000368a0000,0x0000000036b3ed28,0x0000000036b40000)
+  to   space 2688K, 0% used [0x0000000036600000,0x0000000036600000,0x00000000368a0000)
+ PSOldGen        total 43072K, used 17332K [0x000000000a520000, 0x000000000cf30000, 0x0000000034680000)
+  object space 43072K, 40% used [0x000000000a520000,0x000000000b60d1f0,0x000000000cf30000)
+ PSPermGen       total 21248K, used 10432K [0x0000000005120000, 0x00000000065e0000, 0x000000000a520000)
+  object space 21248K, 49% used [0x0000000005120000,0x0000000005b50070,0x00000000065e0000)
+
+Dynamic libraries:
+0x0000000000400000 - 0x000000000042e000 	d:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\bin\javaw.exe
+0x000007fff5b40000 - 0x000007fff5cfe000 	C:\windows\SYSTEM32\ntdll.dll
+0x000007fff3ef0000 - 0x000007fff4026000 	C:\windows\system32\KERNEL32.DLL
+0x000007fff2b30000 - 0x000007fff2c23000 	C:\windows\system32\KERNELBASE.dll
+0x000007fff4030000 - 0x000007fff410e000 	C:\windows\system32\ADVAPI32.dll
+0x000007fff4470000 - 0x000007fff45bc000 	C:\windows\system32\USER32.dll
+0x000007fff5a90000 - 0x000007fff5b35000 	C:\windows\system32\msvcrt.dll
+0x000007fff58b0000 - 0x000007fff58f8000 	C:\windows\SYSTEM32\sechost.dll
+0x000007fff4320000 - 0x000007fff4465000 	C:\windows\system32\RPCRT4.dll
+0x000007fff3b70000 - 0x000007fff3cb1000 	C:\windows\system32\GDI32.dll
+0x000007fff34d0000 - 0x000007fff3509000 	C:\windows\system32\IMM32.DLL
+0x000007fff5970000 - 0x000007fff5a84000 	C:\windows\system32\MSCTF.dll
+0x000000006d890000 - 0x000000006de48000 	d:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\bin\server\jvm.dll
+0x000007ffedfd0000 - 0x000007ffedff0000 	C:\windows\SYSTEM32\WINMM.dll
+0x000007ffedf90000 - 0x000007ffedfc2000 	C:\windows\SYSTEM32\WINMMBASE.dll
+0x000000006d3b0000 - 0x000000006d3ba000 	d:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\bin\hpi.dll
+0x000007fff3cc0000 - 0x000007fff3cc7000 	C:\windows\system32\PSAPI.DLL
+0x000000006d800000 - 0x000000006d80e000 	d:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\bin\verify.dll
+0x000000006d450000 - 0x000000006d477000 	d:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\bin\java.dll
+0x000000006d850000 - 0x000000006d862000 	d:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\bin\zip.dll
+0x000000006d0a0000 - 0x000000006d262000 	D:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\bin\awt.dll
+0x000007ffee190000 - 0x000007ffee20d000 	C:\windows\SYSTEM32\WINSPOOL.DRV
+0x000007fff3d70000 - 0x000007fff3eee000 	C:\windows\system32\ole32.dll
+0x000007fff45c0000 - 0x000007fff58a4000 	C:\windows\system32\SHELL32.dll
+0x000007fff3960000 - 0x000007fff3b10000 	C:\windows\SYSTEM32\combase.dll
+0x000007fff3540000 - 0x000007fff3590000 	C:\windows\system32\SHLWAPI.dll
+0x000007fff1ad0000 - 0x000007fff1b6f000 	C:\windows\system32\apphelp.dll
+0x000007ffefe60000 - 0x000007fff00c9000 	C:\windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9200.16384_none_418c2a697189c07f\comctl32.dll
+0x000007fff0ac0000 - 0x000007fff0ae1000 	C:\windows\SYSTEM32\DWMAPI.DLL
+0x000007fff17d0000 - 0x000007fff18b6000 	C:\windows\system32\uxtheme.dll
+0x000000006d340000 - 0x000000006d3ab000 	D:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\bin\fontmanager.dll
+0x0000000180000000 - 0x00000001803af000 	C:\windows\system32\SOGOUWB.IME
+0x000007ffee640000 - 0x000007ffee647000 	C:\windows\system32\MSIMG32.dll
+0x000007fff3400000 - 0x000007fff34c3000 	C:\windows\system32\OLEAUT32.dll
+0x000007ffedbb0000 - 0x000007ffedbb9000 	C:\windows\system32\VERSION.dll
+0x000007fff0560000 - 0x000007fff05f6000 	C:\windows\SYSTEM32\SHCORE.dll
+0x000007ffecb90000 - 0x000007ffecbbe000 	C:\windows\SYSTEM32\ntmarta.dll
+0x000007fff2900000 - 0x000007fff290a000 	C:\windows\SYSTEM32\CRYPTBASE.dll
+0x000007fff28a0000 - 0x000007fff28fc000 	C:\windows\SYSTEM32\bcryptPrimitives.dll
+0x000007ffd6a80000 - 0x000007ffd6c80000 	C:\windows\SYSTEM32\d3d9.dll
+0x000007ffed6c0000 - 0x000007ffed804000 	C:\windows\SYSTEM32\aticfx64.dll
+0x000007ffe8bc0000 - 0x000007ffe8be0000 	C:\windows\SYSTEM32\atiu9p64.dll
+0x000007ffd2130000 - 0x000007ffd2891000 	C:\windows\SYSTEM32\atiumd64.dll
+0x000000006e300000 - 0x000000006eb8d000 	C:\windows\SYSTEM32\atiumd6a.dll
+0x000007fff2370000 - 0x000007fff238a000 	C:\windows\SYSTEM32\CRYPTSP.dll
+0x000007fff1fa0000 - 0x000007fff1fe9000 	C:\windows\system32\rsaenh.dll
+0x000007fff2060000 - 0x000007fff207f000 	C:\windows\SYSTEM32\USERENV.dll
+0x000007fff29e0000 - 0x000007fff29f5000 	C:\windows\SYSTEM32\profapi.dll
+0x000000006d6a0000 - 0x000000006d6b7000 	D:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\bin\net.dll
+0x000007fff3b10000 - 0x000007fff3b68000 	C:\windows\system32\WS2_32.dll
+0x000007fff3220000 - 0x000007fff3229000 	C:\windows\system32\NSI.dll
+0x000007fff2310000 - 0x000007fff236c000 	C:\windows\system32\mswsock.dll
+0x000007ffec400000 - 0x000007ffec414000 	C:\windows\system32\napinsp.dll
+0x000007ffec3e0000 - 0x000007ffec3f8000 	C:\windows\system32\pnrpnsp.dll
+0x000007fff1320000 - 0x000007fff1336000 	C:\windows\system32\NLAapi.dll
+0x000007fff2110000 - 0x000007fff21a8000 	C:\windows\SYSTEM32\DNSAPI.dll
+0x000007ffec3c0000 - 0x000007ffec3d2000 	C:\windows\System32\winrnr.dll
+0x000007ffec3a0000 - 0x000007ffec3b4000 	C:\windows\system32\wshbth.dll
+0x000007ffec390000 - 0x000007ffec398000 	C:\Windows\System32\rasadhlp.dll
+0x000007fff00e0000 - 0x000007fff010a000 	C:\windows\SYSTEM32\IPHLPAPI.DLL
+0x000007fff00d0000 - 0x000007fff00da000 	C:\windows\SYSTEM32\WINNSI.DLL
+0x000007ffeee30000 - 0x000007ffeee8f000 	C:\windows\System32\fwpuclnt.dll
+0x000000006d6c0000 - 0x000000006d6cb000 	D:\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_64_1.6.0.013\jre\bin\nio.dll
+0x000007fff3cd0000 - 0x000007fff3d66000 	C:\windows\SYSTEM32\clbcatq.dll
+0x000000004b940000 - 0x000000004b952000 	D:\Program Files (x86)\Kingsoft\PowerWordDict\CBSelectText_x64.dll
+0x0000000070530000 - 0x0000000070639000 	C:\windows\WinSxS\amd64_microsoft.vc80.crt_1fc8b3b9a1e18e3b_8.0.50727.6910_none_88dc8c812fb1ba3f\MSVCP80.dll
+0x0000000070d30000 - 0x0000000070df9000 	C:\windows\WinSxS\amd64_microsoft.vc80.crt_1fc8b3b9a1e18e3b_8.0.50727.6910_none_88dc8c812fb1ba3f\MSVCR80.dll
+0x000007fff3520000 - 0x000007fff3534000 	C:\windows\system32\imagehlp.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=GBK 
+java_command: test.Test_PDF_to_JPG
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.7.0_40
+PATH=C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\ProgramData\Lenovo\ReadyApps;C:\Program Files\Java\jdk1.7.0_40\bin;C:\Program Files\MySQL\MySQL Server 5.5\bin;D:\Program Files\TortoiseSVN\bin;D:\Program Files\VisualSVN\bin
+USERNAME=xcfh
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows NT 6.2 Build 9200 
+
+CPU:total 4 (8 cores per cpu, 2 threads per core) family 6 model 10 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, ht
+
+Memory: 4k page, physical 4131220k(1100788k free), swap 8325524k(2408052k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (11.3-b02) for windows-amd64 JRE (1.6.0_13-b03), built on Mar  9 2009 10:50:19 by "java_re" with MS VC++ 8.0
+
+time: Tue May 06 17:27:05 2014
+elapsed time: 10 seconds
+

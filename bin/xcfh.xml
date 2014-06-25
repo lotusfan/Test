@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xcfh>
+	<table name="report_info">
+		<record_report_id>
+			<report_id>2</report_id>
+			<edit_state>null</edit_state>
+			<report_create_time>null</report_create_time>
+			<reimburse_state>0</reimburse_state>
+			<report_date>2013-11</report_date>
+			<report_name>null</report_name>
+			<allowance>
+			</allowance>
+			<advance_payment>
+			</advance_payment>
+			<report_aim>123</report_aim>
+			<report_starttime>2013-11-25</report_starttime>
+			<report_endtime>2013-11-26</report_endtime>
+			<destination>123</destination>
+		</record_report_id>
+		<record_report_id>
+			<report_id>3</report_id>
+			<edit_state>null</edit_state>
+			<report_create_time>null</report_create_time>
+			<reimburse_state>0</reimburse_state>
+			<report_date>2013-11</report_date>
+			<report_name>null</report_name>
+			<allowance>
+			</allowance>
+			<advance_payment>
+			</advance_payment>
+			<report_aim>
+			</report_aim>
+			<report_starttime>2013-11-25</report_starttime>
+			<report_endtime>2013-11-25</report_endtime>
+			<destination>213</destination>
+		</record_report_id>
+	</table>
+	<table name="stay_info">
+		<record_stay_id>
+			<stay_id>1</stay_id>
+			<report_id>2</report_id>
+			<stay_invoice_state>null</stay_invoice_state>
+			<stay_address>
+			</stay_address>
+			<stay_name>123</stay_name>
+			<stay_starttime>2013-11-25</stay_starttime>
+			<stay_endtime>2013-11-25</stay_endtime>
+			<stay_phonenumber>
+			</stay_phonenumber>
+			<stay_money>
+			</stay_money>
+			<stay_bill>null</stay_bill>
+			<stay_invoice_local_path>yyy</stay_invoice_local_path>
+			<stay_invoice_server_path>你好</stay_invoice_server_path>
+			<stay_company_pay>null</stay_company_pay>
+		</record_stay_id>
+	</table>
+	<table name="other_info">
+	</table>
+	<table name="traffic_info">
+		<record_traffic_id>
+			<traffic_id>1</traffic_id>
+			<report_id>2</report_id>
+			<traffic_start>
+			</traffic_start>
+			<traffic_destination>
+			</traffic_destination>
+			<traffic_date>2013-11-25</traffic_date>
+			<traffic_time>用用</traffic_time>
+			<traffic_kind>飞机</traffic_kind>
+			<traffic_number>
+			</traffic_number>
+			<traffic_money>
+			</traffic_money>
+			<traffic_bill>null</traffic_bill>
+			<traffic_invoice_local_path>null</traffic_invoice_local_path>
+			<traffic_invoice_server_path>null</traffic_invoice_server_path>
+			<traffic_invoice_state>null</traffic_invoice_state>
+			<traffic_company_pay>null</traffic_company_pay>
+		</record_traffic_id>
+	</table>
+</xcfh>
